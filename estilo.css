@@ -1,0 +1,109 @@
+     :root{
+    --main-radius:5px; /*Variáveis CSS*/
+    --main-padding:5px;
+}
+
+body{
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+   display: grid;
+   height: 100vh;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.2fr 1.5fr 1.5fr 0.5fr;
+   grid-template-areas: 
+                        "nav nav nav nav"
+                        "aside main main main"
+                        "aside content1 content2 content3"
+                        "footer footer footer footer";
+    grid-gap: 0.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font: 1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+nav, main, aside, #content1, #content2, #content3{
+ background-color: rgb(255, 255, 255);
+ color: black;
+ grid-area: nav;
+ border-radius: var(--main-radius);
+ padding-top: var(--main-padding);
+}
+
+main{
+    grid-area: main;
+}
+
+img{
+  width: 99%;
+  border-radius: 20px;
+}
+
+aside{
+    grid-area: aside;
+}
+
+aside img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#content1{
+    grid-area: content1;
+}
+
+#content2{
+    grid-area: content2;
+}
+
+#content3{
+    grid-area: content3;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 4px;
+    grid-area: footer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+  }
+  
+  .logo {
+    width: 80px;
+    margin-right: 20px;
+  }
+  
+  .menu-items {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-left: auto;
+  }
+  
+  .search-bar input {
+    margin-right: 5px;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+  }
+
+  
